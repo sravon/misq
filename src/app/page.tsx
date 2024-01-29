@@ -30,10 +30,10 @@ export default function Home() {
       <Highlight />
       <Color />
       <Shirts />
-      {/* <Shirts />
+      <Shirts />
       <TopSell />
       <Shirts />
-      <Highlight /> */}
+      <Highlight />
     </>
   );
 }

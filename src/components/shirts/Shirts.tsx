@@ -75,12 +75,12 @@ const products = [
             <div className="relative -mb-6 w-full overflow-x-auto pb-6">
               <ul
                 role="list"
-                className="mx-4 inline-flex space-x-8 sm:mx-6 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-x-8 lg:space-x-0"
+                className="mx-4 inline-flex space-x-8 sm:mx-6 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-x-4 lg:space-x-0"
               >
                 {products.map((product) => (
                   <li key={product.id} className="inline-flex w-64 flex-col text-center lg:w-auto">
                     <div className="group relative">
-                      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200">
+                      <div className="aspect-h-16 aspect-w-9 w-full overflow-hidden rounded-md bg-gray-200">
                         <img
                           src={product.imageSrc}
                           alt={product.imageAlt}
