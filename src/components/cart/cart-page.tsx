@@ -8,6 +8,7 @@ import {
   XMarkIcon as XMarkIconOutline,
 } from '@heroicons/react/24/outline'
 import { CheckIcon, ClockIcon, QuestionMarkCircleIcon, XMarkIcon as XMarkIconMini } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 const navigation = {
   categories: [
@@ -140,7 +141,7 @@ const products = [
     color: 'Sienna',
     inStock: true,
     size: 'Large',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-01-product-01.jpg',
+    imageSrc: '/t1.jpg',
     imageAlt: "Front of men's Basic Tee in sienna.",
   },
   {
@@ -152,7 +153,7 @@ const products = [
     inStock: false,
     leadTime: '3–4 weeks',
     size: 'Large',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-01-product-02.jpg',
+    imageSrc: '/t2.jpg',
     imageAlt: "Front of men's Basic Tee in black.",
   },
   {
@@ -162,7 +163,7 @@ const products = [
     price: '$35.00',
     color: 'White',
     inStock: true,
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-01-product-03.jpg',
+    imageSrc: '/t1.jpg',
     imageAlt: 'Insulated bottle with white base and black snap lid.',
   },
 ]
@@ -278,7 +279,7 @@ export default function CartPage() {
                           {category.featured.map((item) => (
                             <div key={item.name} className="group relative text-sm">
                               <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                                <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
+                                <Image width={500} height={500} src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
                               </div>
                               <a href={item.href} className="mt-6 block font-medium text-gray-900">
                                 <span className="absolute inset-0 z-10" aria-hidden="true" />
@@ -340,7 +341,7 @@ export default function CartPage() {
 
                 <div className="border-t border-gray-200 px-4 py-6">
                   <a href="#" className="-m-2 flex items-center p-2">
-                    <img
+                    <Image width={500} height={500}
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
@@ -377,7 +378,7 @@ export default function CartPage() {
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
                   <span className="sr-only">Your Company</span>
-                  <img
+                  <Image width={500} height={500}
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                     alt=""
@@ -425,7 +426,7 @@ export default function CartPage() {
                                       {category.featured.map((item) => (
                                         <div key={item.name} className="group relative text-base sm:text-sm">
                                           <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                                            <img
+                                            <Image width={500} height={500}
                                               src={item.imageSrc}
                                               alt={item.imageAlt}
                                               className="object-cover object-center"
@@ -498,7 +499,7 @@ export default function CartPage() {
 
                 <div className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
-                    <img
+                    <Image width={500} height={500}
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
@@ -546,7 +547,7 @@ export default function CartPage() {
               {products.map((product, productIdx) => (
                 <li key={product.id} className="flex py-6 sm:py-10">
                   <div className="flex-shrink-0">
-                    <img
+                    <Image width={500} height={500}
                       src={product.imageSrc}
                       alt={product.imageAlt}
                       className="h-24 w-24 rounded-md object-cover object-center sm:h-48 sm:w-48"
@@ -676,7 +677,7 @@ export default function CartPage() {
             {relatedProducts.map((relatedProduct) => (
               <div key={relatedProduct.id} className="group relative">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 lg:h-80">
-                  <img
+                  <Image width={500} height={500}
                     src={relatedProduct.imageSrc}
                     alt={relatedProduct.imageAlt}
                     className="h-full w-full object-cover object-center lg:h-full lg:w-full"
@@ -709,7 +710,7 @@ export default function CartPage() {
             <div className="grid grid-cols-1 md:grid-flow-col md:auto-rows-min md:grid-cols-12 md:gap-x-8 md:gap-y-16">
               {/* Image section */}
               <div className="col-span-1 md:col-span-2 lg:col-start-1 lg:row-start-1">
-                <img
+                <Image width={500} height={500}
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                   alt=""
                   className="h-8 w-auto"

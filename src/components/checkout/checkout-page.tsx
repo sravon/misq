@@ -9,6 +9,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { CheckCircleIcon, ChevronDownIcon, TrashIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 const currencies = ['CAD', 'USD', 'AUD', 'EUR', 'GBP']
 const navigation = {
@@ -19,25 +20,25 @@ const navigation = {
         {
           name: 'New Arrivals',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
+          imageSrc: '/t1.jpg',
           imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
         },
         {
           name: 'Basic Tees',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
+          imageSrc: '/t2.jpg',
           imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
         },
         {
           name: 'Accessories',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-03.jpg',
+          imageSrc: '/t3.jpg',
           imageAlt: 'Model wearing minimalist watch with black wristband and white watch face.',
         },
         {
           name: 'Carry',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg',
+          imageSrc: '/t4.jpg',
           imageAlt: 'Model opening tan leather long wallet with credit card pockets and cash pouch.',
         },
       ],
@@ -48,26 +49,26 @@ const navigation = {
         {
           name: 'New Arrivals',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-01.jpg',
+          imageSrc: '/t4.jpg',
           imageAlt: 'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
         },
         {
           name: 'Basic Tees',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-02.jpg',
+          imageSrc: '/t1.jpg',
           imageAlt: 'Model wearing light heather gray t-shirt.',
         },
         {
           name: 'Accessories',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-03.jpg',
+          imageSrc: '/t3.jpg',
           imageAlt:
             'Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body.',
         },
         {
           name: 'Carry',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-04.jpg',
+          imageSrc: '/t4.jpg',
           imageAlt: 'Model putting folded cash into slim card holder olive leather wallet with hand stitching.',
         },
       ],
@@ -86,7 +87,7 @@ const products = [
     price: '$32.00',
     color: 'Black',
     size: 'Large',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/checkout-page-02-product-01.jpg',
+    imageSrc: '/t1.jpg',
     imageAlt: "Front of men's Basic Tee in black.",
   },
   // More products...
@@ -200,7 +201,7 @@ export default function CheckoutPage() {
                           {category.featured.map((item) => (
                             <div key={item.name} className="group relative">
                               <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
-                                <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
+                                <Image width={500} height={500} src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
                               </div>
                               <a href={item.href} className="mt-6 block text-sm font-medium text-gray-900">
                                 <span className="absolute inset-0 z-10" aria-hidden="true" />
@@ -317,7 +318,7 @@ export default function CheckoutPage() {
                 <div className="hidden lg:flex lg:flex-1 lg:items-center">
                   <a href="#">
                     <span className="sr-only">Your Company</span>
-                    <img
+                    <Image width={500} height={500}
                       className="h-8 w-auto"
                       src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                       alt=""
@@ -377,7 +378,7 @@ export default function CheckoutPage() {
                                         {category.featured.map((item) => (
                                           <div key={item.name} className="group relative">
                                             <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
-                                              <img
+                                              <Image width={500} height={500}
                                                 src={item.imageSrc}
                                                 alt={item.imageAlt}
                                                 className="object-cover object-center"
@@ -436,7 +437,7 @@ export default function CheckoutPage() {
                 {/* Logo (lg-) */}
                 <a href="#" className="lg:hidden">
                   <span className="sr-only">Your Company</span>
-                  <img
+                  <Image width={500} height={500}
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                     alt=""
                     className="h-8 w-auto"
@@ -821,7 +822,7 @@ export default function CheckoutPage() {
                   {products.map((product) => (
                     <li key={product.id} className="flex px-4 py-6 sm:px-6">
                       <div className="flex-shrink-0">
-                        <img src={product.imageSrc} alt={product.imageAlt} className="w-20 rounded-md" />
+                        <Image width={500} height={500} src={product.imageSrc} alt={product.imageAlt} className="w-20 rounded-md" />
                       </div>
 
                       <div className="ml-6 flex flex-1 flex-col">
@@ -916,7 +917,7 @@ export default function CheckoutPage() {
             <div className="grid grid-cols-1 md:grid-flow-col md:auto-rows-min md:grid-cols-12 md:gap-x-8 md:gap-y-16">
               {/* Image section */}
               <div className="col-span-1 md:col-span-2 lg:col-start-1 lg:row-start-1">
-                <img
+                <Image width={500} height={500}
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                   alt=""
                   className="h-8 w-auto"

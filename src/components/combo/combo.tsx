@@ -1,63 +1,53 @@
+import Image from "next/image"
+
 const people = [
     {
       name: 'Michael Foster1',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d1.jpg"
     },
     {
       name: 'Michael Foster2',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d2.jpg",
     },
     {
       name: 'Michael Foster3',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d3.jpg",
     },
     {
       name: 'Michael Foster1',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d4.jpg",
     },
     {
       name: 'Michael Foster2',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d5.jpg",
     },
     {
       name: 'Michael Foster3',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d6.jpg",
     },
     {
       name: 'Michael Foster1',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d7.jpg",
     },
     {
       name: 'Michael Foster2',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d8.jpg",
     },
     {
       name: 'Michael Foster3',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d9.jpg",
     },
     {
       name: 'Michael Foster2',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d3.jpg",
     },
     {
       name: 'Michael Foster3',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d2.jpg",
     },
     {
       name: 'Michael Foster3',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      imageUrl:"/d1.jpg",
     },
   ]
   
@@ -71,7 +61,7 @@ const people = [
           >
             {people.map((person,i) => (
               <li key={i}>
-                <img className="mx-auto h-24 w-24 rounded-3xl" src={person.imageUrl} alt="" />
+                <Image width={150} height={150} className="mx-auto h-24 w-24 rounded-3xl" src={person.imageUrl} alt="" />
                 <h3 className="mt-3 text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
               </li>
             ))}

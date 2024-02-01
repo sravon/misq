@@ -1,5 +1,6 @@
 "use client"
 import { MagnifyingGlassIcon } from '@heroicons/react/16/solid'
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 export default function Sidebar () {
@@ -34,7 +35,7 @@ export default function Sidebar () {
                     <span className="text-2xl font-extrabold">MyPortHouse</span>
                 </a>
                 <div className="flex flex-col">
-                    <img src="suma.jpg" alt="Third" className="h-20 w-20 rounded-full object-cover mx-auto" />
+                    <Image width={500} height={500} src="/suma.jpg" alt="Third" className="h-20 w-20 rounded-full object-cover mx-auto" />
                     <h2 className="text-center text-xl text-yellow-400">Abdur Rahman Kazi</h2>
                     <h2 className="text-center text-gray-400">( Software Developer )</h2>
                 </div>

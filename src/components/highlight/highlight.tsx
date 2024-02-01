@@ -1,40 +1,25 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+import Image from "next/image"
+
 const products = [
     {
       id: 1,
-      name: 'Black Basic Tee',
-      price: '$32',
+      name: 'Black Basic Tee 1',
       href: '#',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-03-favorite-01.jpg',
+      imageSrc: '/t1.jpg',
       imageAlt: "Model wearing women's black cotton crewneck tee.",
     },
     {
       id: 2,
-      name: 'Black Basic Tee',
-      price: '$32',
+      name: 'Red Basic Tee',
       href: '#',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-03-favorite-01.jpg',
+      imageSrc: '/t2.jpg',
       imageAlt: "Model wearing women's black cotton crewneck tee.",
     },
     {
       id: 3,
-      name: 'Black Basic Tee',
-      price: '$32',
+      name: 'White Tee',
       href: '#',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-03-favorite-01.jpg',
+      imageSrc: '/t3.jpg',
       imageAlt: "Model wearing women's black cotton crewneck tee.",
     },
     // More products...
@@ -48,7 +33,9 @@ const products = [
             {products.map((product) => (
               <div key={product.id} className="group relative">
                 <div className="h-96 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2 group-hover:opacity-75 sm:h-auto">
-                  <img
+                  <Image
+                    width={800}
+                    height={800}
                     src={product.imageSrc}
                     alt={product.imageAlt}
                     className="h-full w-full object-cover object-center"

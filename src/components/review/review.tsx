@@ -1,4 +1,5 @@
 import { StarIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 const reviews = {
     average: 4,
@@ -19,7 +20,7 @@ const reviews = {
       `,
             author: 'Emily Selman',
             avatarSrc:
-                'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+                '/t1.jpg',
         },
         // More reviews...
     ],
@@ -117,7 +118,7 @@ export default function Review() {
                             {reviews.featured.map((review) => (
                                 <div key={review.id} className="py-12">
                                     <div className="flex items-center">
-                                        <img src={review.avatarSrc} alt={`${review.author}.`} className="h-12 w-12 rounded-full" />
+                                        <Image width={500} height={500} src={review.avatarSrc} alt={`${review.author}.`} className="h-12 w-12 rounded-full" />
                                         <div className="ml-4">
                                             <h4 className="text-sm font-bold text-gray-900">{review.author}</h4>
                                             <div className="mt-1 flex items-center">

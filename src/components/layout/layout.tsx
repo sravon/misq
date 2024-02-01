@@ -8,6 +8,8 @@ import {
 import { Fragment, ReactElement, ReactNode, useState } from 'react'
 import TopBar from './top-bar'
 import Footer from './Footer'
+import Partners from '../ui/partner'
+import Image from 'next/image'
 
 
 function classNames(...classes: string[]) {
@@ -79,9 +81,9 @@ export default function Layout({
                                     {/* Sidebar component, swap this element with another sidebar if you like */}
                                     <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-4">
                                         <div className="flex h-16 shrink-0 items-center">
-                                            <img
+                                            <Image width={500} height={500}
                                                 className="h-8 w-auto"
-                                                src="https://tailwindui.com/img/logos/mark.svg?color=white"
+                                                src="/favicon.ico"
                                                 alt="Your Company"
                                             />
                                         </div>
