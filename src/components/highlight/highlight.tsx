@@ -21,18 +21,23 @@ const products = [
       href: '#',
       imageSrc: '/t3.jpg',
       imageAlt: "Model wearing women's black cotton crewneck tee.",
+    },{
+      id: 4,
+      name: 'White Tee',
+      href: '#',
+      imageSrc: '/t1.jpg',
+      imageAlt: "Model wearing women's black cotton crewneck tee.",
     },
-    // More products...
   ]
   
   export default function Highlight() {
     return (
       <div className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 lg:gap-x-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-4 gap-x-2 gap-y-4 sm:gap-x-6 sm:gap-y-0 lg:gap-x-8">
             {products.map((product) => (
               <div key={product.id} className="group relative">
-                <div className="h-96 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2 group-hover:opacity-75 sm:h-auto">
+                <div className="w-full overflow-hidden rounded-lg aspect-h-3 aspect-w-2 group-hover:opacity-75 h-auto md:h-96">
                   <Image
                     width={800}
                     height={800}
@@ -41,7 +46,7 @@ const products = [
                     className="h-full w-full object-cover object-center"
                   />
                 </div>
-                <h3 className="mt-4 text-base text-center font-semibold text-gray-900">
+                <h3 className="mt-4 text-xs sm:text-base text-center font-semibold text-gray-900">
                   <a href={product.href}>
                     <span className="absolute inset-0" />
                     {product.name}
@@ -49,13 +54,6 @@ const products = [
                 </h3>
               </div>
             ))}
-          </div>
-  
-          <div className="mt-6 sm:hidden">
-            <a href="#" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
-              Browse all favorites
-              <span aria-hidden="true"> &rarr;</span>
-            </a>
           </div>
         </div>
       </div>

@@ -5,9 +5,9 @@ type Props = {imageSrc:string,imageAlt:string,color:string,price:string,name:str
 
 const ProductItem = ({imageSrc,imageAlt,color,price,name,availableColors}:Props) => {
     return (
-        <li className="inline-flex w-64 flex-col text-center lg:w-auto">
-            <div className="group relative">
-                <div className="relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200">
+        <li className="group relative">
+            <div className="group relative w-full overflow-hidden rounded-lg aspect-h-3 aspect-w-2 group-hover:opacity-75 h-auto md:h-96">
+                <div className="w-full h-auto rounded-md bg-gray-200">
                     <Image
                         width={600}
                         height={600}

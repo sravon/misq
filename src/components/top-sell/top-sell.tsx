@@ -5,7 +5,7 @@ export default function TopSell() {
     <div className="bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="sm:flex sm:items-baseline sm:justify-between">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+          <h2 className="text-base md:text-2xl font-bold tracking-tight text-gray-900">
             Top sell
           </h2>
           <a
@@ -48,7 +48,53 @@ export default function TopSell() {
               </div>
             </div>
           </div>
-          <div className="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
+
+          {/* Modile items */}
+          <div className="flex sm:hidden w-full gap-3">
+            <div className="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg">
+              <Image
+                width={800}
+                height={800}
+                src="/t5.jpg"
+                alt="Walnut desk organizer set with white modular trays, next to porcelain mug on wooden desk."
+                className="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full"
+              />
+              <div className="flex justify-between mt-2 px-2">
+                <p className=" text-gray-900 text-sm md:text-lg font-semibold">50$</p>
+                <p className=" text-green-500 text-sm md:text-lg">13.3k Sold</p>
+              </div>
+              <h3 className="mt-4 text-sm md:text-base text-center font-semibold text-gray-900">
+                  <a href={"#"}>
+                    <span className="absolute inset-0" />
+                    product name
+                  </a>
+                </h3>
+                <button className="w-full bg-gray-900 hover:bg-gray-600 mt-2 px-2 py-3 rounded-lg text-white text-sm md:text-lg">Add to Cart</button>
+            </div>
+            <div className="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg">
+              <Image
+                width={800}
+                height={800}
+                src="/t2.jpg"
+                alt="Walnut desk organizer set with white modular trays, next to porcelain mug on wooden desk."
+                className="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full"
+              />
+              <div className="flex justify-between mt-2 px-2">
+                <p className=" text-gray-900 text-sm md:text-lg font-semibold">50$</p>
+                <p className=" text-green-500 text-sm md:text-lg">13.3k Sold</p>
+              </div>
+              <h3 className="mt-4 text-sm md:text-base text-center font-semibold text-gray-900">
+                  <a href={"#"}>
+                    <span className="absolute inset-0" />
+                    product name
+                  </a>
+                </h3>
+                <button className="w-full bg-gray-900 hover:bg-gray-600 mt-2 px-2 py-3 rounded-lg text-white text-sm md:text-lg">Add to Cart</button>
+            </div>
+          </div>
+
+          {/* Desktop item */}
+          <div className="hidden sm:block group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
             <Image
               width={200}
               height={200}
@@ -76,7 +122,8 @@ export default function TopSell() {
               </div>
             </div>
           </div>
-          <div className="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
+          {/* Desktop item */}
+          <div className="hidden sm:block group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
             <Image
               width={800}
               height={800}

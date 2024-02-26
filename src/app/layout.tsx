@@ -1,19 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 import Layout from "@/components/layout/layout";
 import {
-  Bars3Icon,
-  BellIcon,
-  CalendarIcon,
-  ChartPieIcon,
-  Cog6ToothIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
-  HomeIcon,
-  UsersIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+  HomeIcon
+} from '@heroicons/react/24/outline';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
