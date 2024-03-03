@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function TopSell() {
   return (
     <div className="bg-gray-50">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-24 lg:px-8">
         <div className="sm:flex sm:items-baseline sm:justify-between">
-          <h2 className="text-base md:text-2xl font-bold tracking-tight text-gray-900">
+          <h2 className="text-center sm:text-left text-base md:text-2xl font-bold tracking-tight text-gray-900">
             Top sell
           </h2>
           <a

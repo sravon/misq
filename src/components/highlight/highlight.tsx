@@ -34,6 +34,7 @@ const products = [
     return (
       <div className="bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-base md:text-2xl font-bold tracking-tight text-gray-900 pb-4">Shop by Category</h2>
           <div className="grid grid-cols-4 gap-x-2 gap-y-4 sm:gap-x-6 sm:gap-y-0 lg:gap-x-8">
             {products.map((product) => (
               <div key={product.id} className="group relative">

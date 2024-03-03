@@ -1,9 +1,7 @@
 import {
-    BellIcon,
-    MagnifyingGlassIcon,HeartIcon, ShoppingCartIcon
+  MagnifyingGlassIcon,HeartIcon, ShoppingCartIcon
 } from "@heroicons/react/20/solid";
-import { Bars2Icon } from "@heroicons/react/24/solid";
-import Image from "next/image";
+import { Bars2Icon, UserIcon } from "@heroicons/react/24/solid";
 import DropdownMenu from "../ui/dropdown-menu";
 
 const userNavigation = [
@@ -13,9 +11,9 @@ const userNavigation = [
 
 function TopBar() {
   return (
-    <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6 items-center">
+    <div className="flex sm:flex-1 gap-x-4 self-stretch lg:gap-x-6 items-center">
       <form
-        className="relative flex flex-1 border h-12 rounded-md p-1"
+        className="relative hidden sm:flex flex-1 border h-12 rounded-md p-1"
         action="#"
         method="GET"
       >
@@ -37,14 +35,14 @@ function TopBar() {
       <div className="flex items-center gap-x-4 lg:gap-x-6">
         <button
           type="button"
-          className="-m-2.5 p-2.5 text-gray-900 hover:text-gray-500"
+          className="-m-2.5 p-2.5 text-gray-700 hover:text-gray-500"
         >
           <span className="sr-only">View notifications</span>
           <HeartIcon className="h-6 w-6" aria-hidden="true" />
         </button>
         <button
           type="button"
-          className="-m-2.5 p-2.5 text-gray-900 hover:text-gray-500"
+          className="-m-2.5 p-2.5 text-gray-700 hover:text-gray-500"
         >
           <span className="sr-only">View notifications</span>
           <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
@@ -52,13 +50,14 @@ function TopBar() {
 
         <DropdownMenu
           menuTitle={
-            <Image
-              width={8}
-              height={8}
-              className="h-8 w-8 rounded-full"
-              src="/vercel.svg"
-              alt=""
-            />
+            <UserIcon className="h-6 w-8 text-gray-700 rounded-full" />
+            // <Image
+            //   width={8}
+            //   height={8}
+            //   className="h-8 w-8 rounded-full"
+            //   src="/vercel.svg"
+            //   alt=""
+            // />
           }
           menuItems={userNavigation}
         />

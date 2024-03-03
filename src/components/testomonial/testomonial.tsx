@@ -6,12 +6,12 @@ const Testomonial = () => {
             <h2 className="text-base md:text-2xl font-bold tracking-tight text-gray-900">Customer testomony</h2>
             <div className=" rounded-lg grid grid-cols-2 gap-2">
                 <div className="w-full max-w-screen-lg mx-auto">
-                    <video className="w-full" controls>
+                    <video className="w-full" controls poster="/images/banner1.jpg">
                         <source src="test.mp4" type="video/mp4"/>
                     </video>
                 </div>
                 <div className="w-full max-w-screen-lg mx-auto">
-                    <video className="w-full" controls>
+                    <video className="w-full" controls poster="/images/banner1.jpg">
                         <source src="test.mp4" type="video/mp4"/>
                     </video>
                 </div>

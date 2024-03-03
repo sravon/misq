@@ -52,6 +52,7 @@ const products = [
                     alt={product.imageAlt}
                     className="h-full w-full object-cover object-center"
                   />
+                  <div className="absolute text-xs bottom-36 p-2 bg-black text-white">5.0/15</div>
                 </div>
                 <div className="flex justify-between mt-2 px-2">
                     <p className=" text-gray-900 text-sm md:text-lg font-semibold">50$</p>
@@ -63,7 +64,7 @@ const products = [
                     {product.name}
                   </a>
                 </h3>
-                <ul role="list" className="mt-auto flex items-center justify-center space-x-3 pt-6">
+                {/* <ul role="list" className="mt-auto flex items-center justify-center space-x-3 pt-6">
                 {["red","green","blue"].map((color:string) => (
                   <li
                       key={color}
@@ -73,7 +74,7 @@ const products = [
                       <span className="sr-only">{color}</span>
                   </li>
                 ))}
-            </ul>
+            </ul> */}
             <button className="w-full bg-gray-900 hover:bg-gray-600 mt-2 px-2 py-3 rounded-lg text-white text-sm md:text-lg">Add to Cart</button>
               </div>
             ))}

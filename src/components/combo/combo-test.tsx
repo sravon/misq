@@ -84,7 +84,9 @@ function ComboTest() {
         breakpoint: 480,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 4
+          slidesToScroll: 4,
+          autoplay: true,
+          autoplaySpeed: 2000,
         }
       }
     ]
@@ -96,8 +98,10 @@ function ComboTest() {
                     <Slider {...settings}>
                         {people.map((person,i) => (
                             <div key={i} className="">
-                            <Image width={150} height={150} className="mx-auto h-16 w-16 md:h-24 md:w-24 rounded-3xl" src={person.imageUrl} alt="" />
-                            <h3 className="mt-3 text-xs sm:text-base text-center font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
+                              <div className="border rounded-md p-1 mr-2">
+                                <Image width={150} height={150} className="mx-auto h-16 w-16 md:h-24 md:w-24 rounded-3xl" src={person.imageUrl} alt="" />
+                                <h3 className="mt-3 text-xs sm:text-base text-center font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
+                              </div>
                             </div>
                         ))}
                     </Slider>

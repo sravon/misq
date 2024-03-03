@@ -21,10 +21,11 @@ function SimpleSlider({slides}:{slides: string[];}) {
               src={slide}
               width={1200}
               height={200}
-              style={{
-                width: "100%",
-                height: "400px"
-              }}
+              // style={{
+              //   width: "100%",
+              //   height: "400px"
+              // }}
+              className="w-full h-[200px] sm:h-[400px]"
             />
           </div>))}
       </Slider>
