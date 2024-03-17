@@ -1,28 +1,40 @@
-import clsx from "clsx"
+"use client"
+import Slider from "react-slick"
 
   export default function Color() {
     const colors = [
-      { name:'green', colorCode:"bg-[#66cf14]"},
-      { name:'red', colorCode:"bg-[#cf3514]"},
-      { name:'black', colorCode:"bg-[#0d0e0d]"},
-      { name:'pink', colorCode:"bg-[#e852ed]"},
-      { name:'blue', colorCode:"bg-[#52b7ed]"}
+      { id:1,name:'green', colorCode:"bg-[#66cf14]"},
+      { id:2,name:'red', colorCode:"bg-[#cf3514]"},
+      { id:3,name:'black', colorCode:"bg-[#0d0e0d]"},
+      { id:4,name:'pink', colorCode:"bg-[#e852ed]"},
+      { id:5,name:'blue', colorCode:"bg-[#52b7ed]"}
     ]
+
+    const settings = {
+      dots: false,
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 2000,
+      autoplaySpeed: 2000,
+      cssEase: "linear"
+    };
+
     return (
-      <div className="bg-white py-12">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="bg-white py-4">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <h2 className="text-base md:text-2xl font-bold tracking-tight text-gray-900 pb-4">Shop by color</h2>
-          <ul
-            role="list"
-            className="mx-auto grid max-w-2xl grid-cols-5 gap-x-8 gap-y-8 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6"
-          >
-            {colors.map((color,i) => (
-              <li key={i}>
-                <div className={`mx-auto w-12 h-12 md:h-24 md:w-24 rounded-full ${color.colorCode}`} />
-                <h3 className="mt-3 text-xs md:text-base capitalize font-semibold leading-7 tracking-tight text-gray-900">{color.name}</h3>
-              </li>
-            ))}
-          </ul>
+          <div className="slider-container">
+            <Slider {...settings}>
+              {colors.map((color) => (
+                <div key={color.id}>
+                  <div className={`mx-auto w-12 h-12 md:h-24 md:w-24 rounded-full ${color.colorCode}`} />
+                  <h3 className="mt-3 text-xs md:text-base text-center capitalize font-semibold leading-7 tracking-tight text-gray-900">{color.name}</h3>
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
       </div>
     )

@@ -34,11 +34,11 @@ const products = [
   
   export default function TestShirtsSlider({title}:{title:string}) {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         speed: 2000,
         autoplaySpeed: 2000,
         cssEase: "linear"
@@ -49,9 +49,8 @@ const products = [
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between sm:px-6 lg:px-0 pb-4">
             <h2 className="text-base md:text-2xl font-bold tracking-tight text-gray-900">{title}</h2>
-            <a href="#" className=" text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
-              See everything
-              <span aria-hidden="true"> &rarr;</span>
+            <a href="#" className=" text-sm px-3 py-2 text-gray-100 hover:text-gray-500 bg-black rounded-full sm:block">
+              Show more
             </a>
           </div>
           <div className="slider-container">
@@ -66,10 +65,13 @@ const products = [
                         alt={product.imageAlt}
                         className="h-full w-full object-cover object-center"
                     />
-                    <div className="absolute text-xs bottom-36 p-2 bg-black text-white">5.0/15</div>
+                    <div className="absolute text-xs bottom-36 p-2 bg-black text-white">
+                      <span className="text-yellow-500">*</span>(
+                      <span className="">5.0/15</span>)
+                    </div>
                     </div>
                     <div className="flex justify-between mt-2 px-2">
-                        <p className=" text-gray-900 text-sm md:text-lg font-semibold">50$</p>
+                        <p className=" text-gray-900 text-sm md:text-lg font-semibold">50$ <del className="text-[10px] font-normal">$70</del></p>
                         <p className=" text-green-500 text-sm md:text-lg">13.3k Sold</p>
                     </div>
                     <h3 className="mt-4 text-sm md:text-base text-center font-semibold text-gray-900">

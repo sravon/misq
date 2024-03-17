@@ -13,7 +13,7 @@ function SimpleSlider({slides}:{slides: string[];}) {
     slidesToScroll: 1
   };
   return (
-    <div className="min-w-full h-auto overflow-hidden">
+    <div className="min-w-full h-auto pb-4">
       <Slider {...settings}>
           {slides.map((slide,i:number) => (<div key={i}>
             <Image
